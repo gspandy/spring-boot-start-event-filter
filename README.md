@@ -3,11 +3,10 @@
 基于spring-boot的一个事件拦截，通过自定义事件，指定在这之前或之后触发的方法（类似AOP）。并支持根据自定义逻辑拦截方法执行
 
 # 基本使用
-	
+
 	* 在需要拦截Method的类上使用注解 [EventService](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/main/java/top/guyi/event/filter/annotation/EventService.java)，标识这是一个启用事件拦截的对象
 	* 在需要拦截的Method上使用注解 [EventFilter](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/main/java/top/guyi/event/filter/annotation/EventFilter.java)，配置参数
 	* 具体使用，请参见 [TestService](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/test/java/top/guyi/event/filter/TestService.java)
-
 
 # 事件处理器
 	
