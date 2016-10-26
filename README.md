@@ -26,6 +26,6 @@
 ## Java类方式
 		
    * 创建一个普通类，实现接口 [EventFilterConfig](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/main/java/top/guyi/event/filter/conf/EventFilterConfig.java)
-    * 具体使用，请参见 [CustomEventConfig](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/test/java/top/guyi/event/filter/CustomEventConfig.java)
+   * 具体使用，请参见 [CustomEventConfig](https://github.com/guyimaplegithub/spring-boot-start-event-filter/blob/master/src/test/java/top/guyi/event/filter/CustomEventConfig.java)
 		
 	
