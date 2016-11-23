@@ -49,7 +49,7 @@ public class MethodUtils {
 		Annotation[] as = method.getDeclaredAnnotations();
 		for (Annotation an : as) {
 			a = getAnnotation(an.annotationType(), annotationClass);
-			if(a.annotationType() == annotationClass){
+			if(a != null && a.annotationType() == annotationClass){
 				return a;
 			}
 		}
@@ -74,7 +74,7 @@ public class MethodUtils {
 		for (Annotation annotation : as) {
 			if(!AnnotationUtils.isInJavaLangAnnotationPackage(annotation)){
 				a = getAnnotation(annotation.annotationType(), annotationClass);
-				if(a.annotationType() == annotationClass){
+				if(a != null && a.annotationType() == annotationClass){
 					return a;
 				}
 			}

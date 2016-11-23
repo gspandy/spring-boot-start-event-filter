@@ -1,6 +1,7 @@
 package top.guyi.event.filter.handler;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.Map;
 
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -43,6 +44,7 @@ public class EventHandler implements MethodInterceptor{
 		EventFilterContext.service.set(this.handler);
 		EventFilterContext.args.set(args);
 		EventFilterContext.method.set(method);
+		EventFilterContext.attach.set(new HashMap<String, Object>());
 		
 		boolean isrun = true;
 		if(mhc.getBeforeMethod() != null){
@@ -56,6 +58,8 @@ public class EventHandler implements MethodInterceptor{
 		//判断是否被阻断
 		if(isrun){
 			result = method.invoke(handler, args);
+		}else{
+			result = EventFilterContext.getResult();
 		}
 		
 		if(mhc.getAfterMethod() != null){

@@ -4,7 +4,7 @@
 
   <groupId>top.guyi</groupId>
   <artifactId>spring-boot-start-event-filter</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>jar</packaging>
 
   <name>spring-boot-start-event-filter</name>
@@ -25,5 +25,11 @@
   		<artifactId>cglib</artifactId>
   		<version>3.2.4</version>
   	</dependency>
+  	
+  	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-stringcode</artifactId>
+  		<version>0.0.1</version>
+	</dependency>
   </dependencies>
 </project>

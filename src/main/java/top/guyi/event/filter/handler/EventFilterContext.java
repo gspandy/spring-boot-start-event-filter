@@ -1,6 +1,7 @@
 package top.guyi.event.filter.handler;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 /**
  * @author 古逸
@@ -23,6 +24,12 @@ public class EventFilterContext {
 	 * 拦截方法
 	 */
 	static ThreadLocal<Method> method = new ThreadLocal<Method>();
+	
+	/**
+	 * 附加内容
+	 */
+	static ThreadLocal<Map<String,Object>> attach = new ThreadLocal<Map<String,Object>>();
+	
 	
 	/**
 	 * 获取拦截对象
@@ -48,4 +55,38 @@ public class EventFilterContext {
 		return method.get();
 	}
 	
+	
+	/**
+	 * 设置附加属性值
+	 * @param name
+	 * @param value
+	 */
+	public static void setAttach(String name,Object value){
+		attach.get().put(name, value);
+	}
+	
+	/**
+	 * 获取附加属性值
+	 * @param name
+	 * @return
+	 */
+	public static Object getAttach(String name){
+		return attach.get().get(name);
+	}
+	
+	/**
+	 * 设置返回值，方法执行被拦截后生效
+	 * @param value
+	 */
+	public static void setResult(Object value){
+		attach.get().put("filter-server-result",value);
+	}
+	
+	/**
+	 * 获取拦截器返回值
+	 * @return
+	 */
+	public static Object getResult(){
+		return attach.get().get("filter-server-result");
+	}
 }
