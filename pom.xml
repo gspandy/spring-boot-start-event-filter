@@ -23,7 +23,7 @@
   	<dependency>
   		<groupId>cglib</groupId>
   		<artifactId>cglib</artifactId>
-  		<version>3.2.4</version>
+  		<version>3.2.4</version> 
   	</dependency>
   	
   	<dependency>
@@ -32,4 +32,16 @@
   		<version>0.0.1</version>
 	</dependency>
   </dependencies>
+  
+  <distributionManagement>  
+	  <repository>  
+	    <id>Releases</id>  
+	    <url>http://nexus.guyi-maple.space/repository/maven-releases/</url>  
+	  </repository>  
+	  <snapshotRepository>  
+	    <id>Snapshots</id>
+	    <url>http://nexus.guyi-maple.space/repository/maven-snapshots/</url>  
+	  </snapshotRepository>  
+  </distributionManagement>
+  
 </project>

@@ -50,7 +50,7 @@ public class EventHandler implements MethodInterceptor{
 		if(mhc.getBeforeMethod() != null){
 			Object res = mhc.getBeforeMethod().invoke(mhc.getFilter());
 			if(res != null && res instanceof Boolean){
-				isrun = (boolean)res;
+				isrun = (Boolean)res;
 			}
 		}
 		
